@@ -4,8 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vibeshare</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>iTunes Playlist</h1>
+            <div class="search-container">
+                <form id="searchForm" class="search-form">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search for songs..." 
+                        required
+                    >
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Left Column - Search Results -->
+            <section class="search-results-section">
+                <h2>Search Results</h2>
+                <div class="results-container">
+                    <ul id="searchResults" class="song-list">
+                        <li class="song-item">
+                            <img src="" alt="Song artwork" class="song-artwork">
+                            <div class="song-info">
+                                <div class="song-title">po nee po</div>
+                                <div class="song-artist">dhanush</div>
+                            </div>
+                            <button>Add</button>
+                        </li>
+                        <li class="song-item">
+                            <img src="" alt="Song artwork" class="song-artwork">
+                            <div class="song-info">
+                                <div class="song-title">megamo aval</div>
+                                <div class="song-artist">pradeep</div>
+                            </div>
+                            <button>Add</button>
+                        </li>
+                        <li class="song-item">
+                            <img src="" alt="Song artwork" class="song-artwork">
+                            <div class="song-info">
+                                <div class="song-title">thendral vandhu</div>
+                                <div class="song-artist">ilaya raja</div>
+                            </div>
+                            <button>Add</button>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Right Column - Selected Songs -->
+            <section class="playlist-section">
+                <h2>My Playlist <span id="playlistCounter">(2/5)</span></h2>
+                <div class="playlist-container">
+                    <ul id="selectedSongs" class="song-list">
+                        <li class="song-item">
+                            <img src="" alt="Song artwork" class="song-artwork">
+                            <div class="song-info">
+                                <div class="song-title">po nee po</div>
+                                <div class="song-artist">danush</div>
+                            </div>
+                            <button>Remove</button>
+                        </li>
+                        <li class="song-item">
+                            <img src="" alt="Song artwork" class="song-artwork">
+                            <div class="song-info">
+                                <div class="song-title">megamo aval</div>
+                                <div class="song-artist">pradeep</div>
+                            </div>
+                            <button>Remove</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Share Button -->
+                <div class="share-section">
+                    <button id="shareButton" class="share-button" disabled>Share Playlist</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Share Dialog -->
+    <div id="shareDialog" class="dialog-overlay">
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <h3>Your Playlist</h3>
+                <button id="closeDialog" class="close-button">&times;</button>
+            </div>
+            <div class="dialog-body">
+                <div id="playlistPreview" class="playlist-preview"></div>
+            </div>
+            <div class="dialog-footer">
+                <button id="downloadButton" class="download-button">Download</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
