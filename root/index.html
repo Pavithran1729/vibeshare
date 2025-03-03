@@ -10,25 +10,29 @@
     <div class="container">
         <!-- Header Section -->
         <header>
-            <h1>iTunes Playlist</h1>
-            <div class="search-container">
-                <form id="searchForm" class="search-form">
-                    <input 
-                        type="text" 
-                        id="searchInput" 
-                        placeholder="Search for songs..." 
-                        required
-                    >
-                    <button type="submit">Search</button>
-                </form>
-            </div>
+            <h1>vibeshare</h1>
         </header>
 
         <!-- Main Content -->
         <main class="main-content">
-            <!-- Left Column - Search Results -->
-            <section class="search-results-section">
-                <h2>Search Results</h2>
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Search Box -->
+                <section class="search-box">
+                    <form id="searchForm" class="search-form">
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Search for songs..."
+                            required
+                        >
+                        <button type="submit">Search</button>
+                    </form>
+                </section>
+
+                <!-- Search Results -->
+                <section class="search-results-section">
+                    <h2>Search Results</h2>
                 <div class="results-container">
                     <ul id="searchResults" class="song-list">
                         <li class="song-item">
@@ -58,6 +62,7 @@
                     </ul>
                 </div>
             </section>
+            </div>
 
             <!-- Right Column - Selected Songs -->
             <section class="playlist-section">
@@ -65,7 +70,7 @@
                 <div class="playlist-container">
                     <ul id="selectedSongs" class="song-list">
                         <li class="song-item">
-                            <img src="" alt="Song artwork" class="song-artwork">
+                            <img src="3-pick.jpg" alt="Song artwork" class="song-artwork">
                             <div class="song-info">
                                 <div class="song-title">po nee po</div>
                                 <div class="song-artist">danush</div>
